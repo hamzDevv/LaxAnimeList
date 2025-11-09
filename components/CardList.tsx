@@ -2,7 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const CardList = ({ api, title, option, linkHref }) => {
+interface CardListProps {
+    api: any;
+    title?: string;
+    option?: string;
+    linkHref?: string;
+}
+
+const CardList = ({ api, title, option, linkHref }: CardListProps) => {
     return (
         <main className="container-fluid">
             {title && option && linkHref && (
