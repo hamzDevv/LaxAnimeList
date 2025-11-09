@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig = {
+  images: {
+    domains: ['cdn.myanimelist.net', 'media.kitsu.io', 'media.myanimelist.net'], // tergantung API
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig
