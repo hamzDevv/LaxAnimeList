@@ -2,8 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface DataAnime {
+  mal_id: number;
+  images: {
+    webp: {
+      image_url: string;
+    }
+  }
+  title: string;
+}
+
 interface CardListProps {
-    api: any;
+    api: {
+      data: DataAnime[]
+    };
     title?: string;
     option?: string;
     linkHref?: string;
